@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>벽돌깨기</title>
+  <link rel="stylesheet" href="brick_game.css">
+  <script src="brick_game.js" defer></script>
+</head>
+<body>
+  <main class="game">
+    <header class="game-header">
+      <h1>벽돌깨기</h1>
+      <dl class="scoreboard">
+        <div><dt>점수</dt><dd id="score">0</dd></div>
+        <div><dt>남은 기회</dt><dd id="lives">3</dd></div>
+      </dl>
+    </header>
+
+    <div class="board">
+      <canvas id="game-board" width="1280" height="640"
+        aria-label="벽돌깨기 게임판" aria-describedby="controls">
+        이 브라우저에서는 게임판을 그릴 수 없습니다.
+      </canvas>
+      <div class="game-message" id="game-message" role="status">
+        <strong id="message-title">시작할 준비가 됐나요?</strong>
+        <span id="message-detail">스페이스 키를 눌러 공을 출발시키세요.</span>
+      </div>
+    </div>
+
+    <p id="controls" class="controls">
+      막대 이동 <kbd>←</kbd> <kbd>→</kbd>
+      <span>시작 · 이어 하기 <kbd>스페이스</kbd></span>
+      <span>초기화 <kbd>Tab</kbd></span>
+      <span>숫자는 남은 체력 · + 벽돌은 공 추가</span>
+      <span>금색 ? 벽돌은 주변 폭발과 무작위 공 1~10개 추가</span>
+    </p>
+  </main>
+</body>
+</html>

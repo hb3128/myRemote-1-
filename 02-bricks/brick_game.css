@@ -1,0 +1,131 @@
+:root {
+  color-scheme: light;
+  font-family: "맑은 고딕", "Malgun Gothic", sans-serif;
+  color: #202027;
+  background: #f5f5f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 0.75rem;
+}
+
+.game {
+  width: min(100%, 1280px);
+  width: min(100%, 1280px, max(20rem, (100dvh - 7.75rem) * 2));
+  margin-inline: auto;
+}
+
+.game-header, .scoreboard, .controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.game-header {
+  justify-content: space-between;
+  gap: 0.4rem 1rem;
+  margin-bottom: 0.65rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.35rem, 4vw, 2rem);
+  letter-spacing: -0.045em;
+}
+
+.scoreboard {
+  gap: 0.45rem;
+  margin: 0;
+}
+
+.scoreboard div {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  padding: 0.3rem 0.65rem;
+  border: 1px solid #dedee3;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+.scoreboard dt {
+  font-size: 0.875rem;
+}
+
+.scoreboard dd {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: bold;
+  font-variant-numeric: tabular-nums;
+  color: #a71c2d;
+}
+
+.board {
+  position: relative;
+  border: 1px solid #d6d6dc;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: linear-gradient(#ffffffa8, #ffffffa8),
+    #fff url("construction-background.png") center / cover no-repeat;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.game-message {
+  position: absolute;
+  top: 63%;
+  left: 50%;
+  width: max-content;
+  max-width: calc(100% - 1rem);
+  transform: translate(-50%, -50%);
+  padding: clamp(0.35rem, 1.8vw, 1.15rem);
+  border: 1px solid #e1dce0;
+  border-radius: 0.65rem;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 0.3rem 1rem #20202712;
+  pointer-events: none;
+}
+
+.game-message strong, .game-message span {
+  display: block;
+  word-break: keep-all;
+}
+
+.game-message strong {
+  font-size: clamp(1rem, 2.9vw, 1.45rem);
+}
+
+.game-message span {
+  margin-top: 0.3rem;
+  font-size: 0.875rem;
+}
+
+.controls {
+  justify-content: center;
+  gap: 0.35rem;
+  margin: 0.6rem 0 0;
+  font-size: 0.875rem;
+}
+
+.controls span {
+  margin-inline-start: 0.65rem;
+}
+
+kbd {
+  padding: 0.1rem 0.35rem;
+  border: 1px solid #dedee3;
+  border-radius: 0.25rem;
+  background: #fff;
+  font: inherit;
+}
